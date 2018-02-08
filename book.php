@@ -79,9 +79,14 @@ else{
                     
                     require_once('include/dbconnect.php');
                     
-                    $search_if_exist
+                    $search_if_exist = "select  counsellor_no, date, time, office from appoitment_details where date='".$date."' AND (time BETWEEN '."$time".' AND '".$ftimenew."')";
                     //query to serach from database
-                    
+                    $execute_query = mysqli_query($conn, $search_if_exist);
+
+                    while(){
+
+                    	
+                    }
                     
 					
 					
