@@ -48,7 +48,7 @@
 		
 		if(mysqli_num_rows($run)>0){
 			
-			$_SESSION['students']=$user_name;
+			$_SESSION['username']=$user_name;
 			
 			echo "<script>window.open('index.php','_self')</script>";
 		}
