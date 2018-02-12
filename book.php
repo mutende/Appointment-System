@@ -85,19 +85,63 @@ if(isset($_POST['check'])){
 			values('$cnslr_no','$date','$time','$ftimenew','$cnslr_office')";
 
 	//query to serach the database
-	$search_if_exist = "select  counsellor_no, date, time, office from appoitment_details where date='".$date."' AND (time BETWEEN '".$time."' AND '".$ftimenew."')";
+	//$search_if_exist = "select  counsellor_no, date, time, office from appoitment_details where date='".$date."' AND (time BETWEEN '".$time."' AND '".$ftimenew."')";
 	
 	//connect to database
 	require_once('include/dbconnect.php');
 	
 	//query to serach from database
-	$execute_query = mysqli_query($conn, $search_if_exist);
-
-	//what to be done after searching the database
-	if($execute_query){
+	//$execute_query = mysqli_query($conn, $search_if_exist);
+	
+	if(($cnslr_no=='null') or empty($date) or ($cnslr_office=='null')){
 		
+		echo "<script> alert('Some fields are Empty')</script>";
+		exit();
+	}
+		// if a student books an appointment after or before working hours then woooo echo an error
+	else 
+		if(($passed_working_time>$stop_time) or ($time<$begin_work )){
 		
-}//close the if isset bracket
+		echo "<script>alert('select time between 08:30:00 and 16:45:00 snd get attended to. Try again')</script>";
+		exit();
+	}
+		else{
+			
+			
+				//sql query to insert into appointments table
+				$insert_query1 = "insert into appoitment_details(counsellor_no,date,time,en_time,office)
+			
+			values('$cnslr_no','$date','$time','$ftimenew','$cnslr_office')";
+			
+			//insert some information to session table to see successful appointments
+			$create_session1 = "insert into sessions(cnsl_nm,dt,tm,en_tm,ofc)value
+			('$cnslr_no','$date','$time','$ftimenew','$cnslr_office')";
+		
+			//if the query is successful
+			if(mysqli_query($conn,$insert_query1)){
+				
+				//if connection is successful
+			if(mysqli_query($conn,$create_session1)){
+				
+				//echo "<script>alert('second check')</script>";
+				
+						// notify student that the appointment is successful
+				echo "<script>alert('Booked appointment successful')</script>";
+				echo "<script>window.open('book.php','_self')</script>";
+				
+			}else{
+				//else if there was an error in inserting into sessions table echo it out
+				die('Error to connect in session table'.mysqli_error($conn));
+			}
+			
+			//if there was an error in connecting to appointments table echo some error
+		}else{
+			die('Errror to connect in appointment details table'.mysqli_error($conn));
+			
+		}
+		}
+		
+	}	
 ?>
 
 	</body>
