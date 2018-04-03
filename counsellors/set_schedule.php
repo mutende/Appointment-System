@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['users'])){
 	
 	header("location: login.php");
 	
@@ -9,16 +9,18 @@ if(!isset($_SESSION['username'])){
 else{
 
 ?>
-<! DOCKTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>set schedule</title>
-<link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/styleset_schedule.css" rel="stylesheet" type="text/css" media="all"/>
+<link rel="stylesheet" href="../css/styleview.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 </head>	
 <body>
 <div id="cotainerdiv">
-	<?php include("../include/head.php"); ?>
-	<?php include("adminnavbar.php");?>
+	<?php include("../include/adminhead.php"); ?>
+	<?php include("../include/counsellornavbar.php");?>
 	
 	<h2>date and times that you will not be availabe for this week</h2>
 	<div id="align">
@@ -39,6 +41,11 @@ else{
 			</select><br>
 		</div>
 
+		<div id="email">
+
+		<label for="">Email</label><br>
+		<input type="email" name="mail" id=""><br>
+		</div>
 		<label>Date</label><br/>
 		
 		<input type="date" name="date" placeholder="YYYY-MM-DD"><br/>
@@ -139,6 +146,7 @@ else{
 				if(isset($_POST['set'])){
 					
 					$date = date($_POST['date']);
+					$email = $_POST['mail'];
 					$counsellor= $_POST['counsellor'];
 					$time = date($_POST['settime']);
 					$daysoff = $_POST['daysoff'];
@@ -151,7 +159,7 @@ else{
 					//add days
 					$date1= date('Y-m-d',(strtotime('+'.$daysoff.'days',strtotime($date))));
 
-					//add months incase it is a leaf
+					//add months incase it is a leave
 					$date2= date('Y-m-d',(strtotime('+'.$monthsoff.'months',strtotime($date1))));
 					
 					$availabe_date=$date2;
@@ -169,8 +177,8 @@ else{
 						
 						require_once('../include/dbconnect.php');
 						
-						$insert_query= "insert into admin_schedule(cnsl_nm,date,time,hduration,minduration,days,months,avlbl_day,avlbl_tm,reason)values
-						('$counsellor','$date','$time','$duration_h','$duration_min','$daysoff','$monthsoff','$availabe_date ','$available_time','$reason')";
+						$insert_query= "insert into counsellor_schedule(cnsl_nm,email,date,time,hr_drxn,min_drxn,days,mnths,avlbl_dt,avlbl_tm,rsn)values
+						('$counsellor','$email','$date','$time','$duration_h','$duration_min','$daysoff','$monthsoff','$availabe_date ','$available_time','$reason')";
 						
 						if(mysqli_query($conn,$insert_query)){
 

@@ -1,0 +1,40 @@
+body{
+    margin:0px;
+    padding: 0px;
+    
+}
+#searchdiv{
+
+   
+    margin-top: 50px;
+    margin-right:auto;
+    margin-left:710px;
+    
+}
+#searchdiv label{
+
+    font-size: 16px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-right:5px;
+}
+
+#tableregion{
+    
+    height: auto;
+    width: 600px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:10px;
+    
+}
+#tableregion table{
+
+    margin-left: auto;
+    margin-right:auto;
+    width: 600px;
+   
+
+}
+
+

@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$dean =$_SESSION['user'];
-
-if(!isset($dean)){
+$counsellor = $_SESSION['users'];
+if(!isset($counsellor)){
+	
 	
 	header("location: login.php");
 	
@@ -19,8 +19,8 @@ else{
 	</head>
 	<body>
 	<?php include("../include/adminhead.php"); ?>
-	<?php include("../include/adminnavbar.php");?>
-	<h2>Welcome <?php $dean;?></h2>
+	<?php include("../include/counsellornavbar.php");?>
+	<h2>Welcome <?php $counsellor;?></h2>
 		
 	</body>
 <html>

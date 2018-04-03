@@ -1,0 +1,77 @@
+body{
+    padding:0px;
+    margin: 0px;
+  
+}
+#searchdiv{
+
+    width: 800px;
+    height: 80px;
+    margin-top:20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+#searchdiv label{
+    font-weight: bold;
+    font-size:20px;
+    margin-left: 20px;
+    font-family: sans-serif;
+    
+    
+}
+#searchdiv input[type="submit"]{
+    height: 36px;
+    margin-left: 20px;
+    width: 120px;
+    background: rgba(93, 97, 95, 0.863);
+    border:none;
+    
+}
+#searchdiv input[type="submit"]:hover{
+
+    background: rgba(20, 27, 24, 0.863);
+    color:whitesmoke;
+    cursor: pointer;
+}
+
+#tablergn{
+
+    height: auto;
+    width: 600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#tablergn table{
+
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+
+}
+
+#printbtn{
+
+    height: auto;
+    width: 100px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+
+}
+#printbtn input[type="submit"]{
+
+    height: 36px;
+    margin-left: 20px;
+    width: 120px;
+    background: rgba(93, 97, 95, 0.863);
+    border:none;
+}
+
+#printbtn input[type="submit"]:hover{
+
+    background: rgba(20, 27, 24, 0.863);
+    color:whitesmoke;
+    cursor: pointer;
+}

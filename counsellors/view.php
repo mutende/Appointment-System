@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['user'])){
+if(!isset($_SESSION['users'])){
 	
 	header("location: login.php");
 	
@@ -18,11 +18,11 @@ else{
 	<title>view appointments</title>
 	<link rel="stylesheet" href="../css/styleview.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+	<link rel="stylesheet" href="../css/styleview.css">
 </head>
 <body>
 	<?php include('../include/adminhead.php');?>
-	<?php include('../include/adminnavbar.php');?>
+	<?php include('../include/counsellornavbar.php');?>
 
 	<div id="searchdiv"> 
 
@@ -40,7 +40,7 @@ else{
 
 	</div>
 
-		<div id="tablergn" class="table-responsive">
+		<div id="tablergn">
 			<table class="table table-striped table-bordered table-condensed">
 
 			<tr>

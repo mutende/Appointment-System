@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['regNo'])){
 	
 	header("location: login.php");
 	
@@ -10,7 +10,7 @@ else{
 	?>
 
 
-<!DOCKTYPE HTML>
+<!DOCTYPE HTML>
 <HTML lang="en">
 	<head>
 	<meta charset="UTF-8">
@@ -18,11 +18,11 @@ else{
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>home</title>
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link  rel="stylesheet" href="style.css" type="text/css" media="all">
+		<link  rel="stylesheet" href="styleindex.css" type="text/css" media="all">
 	</head>
 <body>
 	<div><?php include("include/head.php");?>
-	<div><?php include("navbar.php");?></div>
+	<div><?php include("include/navbar.php");?></div>
 	<div id="homemaindiv"></div>
 	
 	<!--<script src="bootstrap/js/bootstrap.min.js"></script>-->

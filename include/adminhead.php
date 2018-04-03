@@ -15,7 +15,7 @@
 	</head>
 	<body>
 	<div id="edithead">
-	<img class="logo" src="images/logo.jpg" alt="logo" height="80px" width="80px" align="center">
+	<img class="logo" src="../images/logo.jpg" alt="logo" height="80px" width="80px" align="center">
 	<h1 align="center">Egerton University Appointment Booking System</h1>
 	</div>
 	</body>

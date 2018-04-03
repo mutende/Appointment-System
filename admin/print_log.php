@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['user'])){
 	
 	header("location: login.php");
 	
@@ -9,7 +9,7 @@ if(!isset($_SESSION['username'])){
 else{
 
 ?>
-<! DOCKTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>print logs</title>
@@ -17,7 +17,7 @@ else{
 </head>	
 
 	<?php include("../include/head.php"); ?>
-	<?php include("adminnavbar.php");?>
+	<?php include("../include/adminnavbar.php");?>
 	
 </body>
 </html>
