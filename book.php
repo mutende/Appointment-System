@@ -24,7 +24,11 @@ else{
 		<title>book appointment</title>
 		<link href="css/stylebook.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/datepicker.css">
+		<script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+   		 <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+
 	</head>
 	<body>
 	<?php include("include/head.php");?>
@@ -46,7 +50,8 @@ else{
 		</select><br>
 		
 		<label>Pick Date </label><br>
-		<input type="date" name="date" placeholder="YYYY/MM/DD"><br>
+		<input type="text" name="date" placeholder="YYYY/MM/DD"><br>
+		<?php include('include/datepicker.php');?>
 		
 		<label>Time</label><br>
 		<div id="picktimentime">

@@ -23,6 +23,9 @@
     <title>booked time and date</title>
     <link rel="stylesheet" href="css/stylesessions.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>   
     <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
@@ -36,7 +39,8 @@
                 <div id="searchdiv">
 
                 <label for="">Date</label>
-                    <input type="date" name="datevalue" id="" placeholder="YYYY/MM/DD" required>
+                    <input type="date" name="date" id="" placeholder="dd-mm-yyyy" required>
+                    <?php include('include/datepicker.php');?>
                     <input type="submit" name="search" value="Search">
 
                 </div>
@@ -57,7 +61,7 @@
 
             if(isset($_GET['search'])){
 
-                $search_id = $_GET['datevalue'];
+                $search_id = $_GET['date'];
 
                 require_once('include/dbconnect.php');
                 $search_query = "select * from sessions where date = '$search_id'";
