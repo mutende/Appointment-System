@@ -18,7 +18,14 @@ else{
 	<title>view appointments</title>
 	<link rel="stylesheet" href="../css/styleview.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/timepicker.css">
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/timepicker.js"></script>
+
+	
 </head>
 <body>
 	<?php include('../include/adminhead.php');?>
@@ -29,10 +36,27 @@ else{
 		<form action="view.php" method="get">
 
 			<label for="">From</label>
-			<input type="date" name="from" id="">
+			<input type="date" name="from" id="datepicker">
+			<?php include('../include/datepicker.php');?>
 			
 			<label for="">To</label>
-			<input type="date" name="to" id="">
+			<input type="date" name="to" id="datepicker2">
+			<script type="text/javascript">
+                                
+                            $(document).ready(function(){
+                            
+
+                                    $("#datepicker2").datepicker({
+                                        numberOfMonth:1,
+                                        format: 'yyyy/mm/dd',
+                                        todayHighlight:true,
+                                        autoclose:true,
+
+                                    });
+            
+        })
+                           
+    </script>
 
 			<input type="submit" name="view" value="View">
 

@@ -1,18 +1,14 @@
+#navbars{
 
-#navbar{
-	
-	height: 50px;
-	background:#4F4F4F;
-	margin-top: 42px;
-	
+	margin-top:50px;
+	padding-right:50px;
+	font-family: sans-serif;
+	background:grey;
+	color: white;
 }
- #navul{
-	
-	margin: 0px;
-	padding: 0;
-}
-#navli{
-	list-style: none;
+#navbars a{
+
+	color: black;
 }
 #checkbox{
 	
@@ -30,27 +26,4 @@
 	padding-top: 20px;
 	font-size: 30px;
 	font-family: sans-serif;
-}
-
-navli > a:active{
-	
-	color: white;
-}
-
-#navli > a{
-	text-decoration: none;
-	float: right;
-	display:block;
-	padding: 10px 20px 10px;
-	color: #2E8B57;
-	line-height:35px;
-	text-align: center;
-	font-family: cursive;
-	font-size:20px;
-}
-
-
-#navli > a:hover{
-	
-	color: white;
 }

@@ -16,6 +16,12 @@ else{
 <link href="../css/styleset_schedule.css" rel="stylesheet" type="text/css" media="all"/>
 <link rel="stylesheet" href="../css/styleview.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/datepicker.css">
+<link rel="stylesheet" href="../css/timepicker.css">
+<script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="../js/timepicker.js"></script>
 </head>	
 <body>
 <div id="cotainerdiv">
@@ -48,10 +54,12 @@ else{
 		</div>
 		<label>Date</label><br/>
 		
-		<input type="date" name="date" placeholder="YYYY-MM-DD"><br/>
+		<input type="date" name="date" id="datepicker"><br/>
+		<?php include('../include/datepicker.php');?>
 		
 			<label>Time </label><br/>
-			<input type="time" name="settime"><br/>
+			<input type="time" name="settime" id="timepicker"><br/>
+			<?php include('../include/timepicker.php');?>
 
 		<label>Duration</label><br/>
 

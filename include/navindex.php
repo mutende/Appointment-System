@@ -7,20 +7,20 @@
 
 </head>
 	<body>
-	<div id="navbars">
+        <div id="navbars">
             <nav  class="nav justify-content-end" >
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php"> Home </a>
+                        <a class="nav-link active" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="book.php"> Book Appointment </a>
+                        <a class="nav-link" href="book.php">Book Appointment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sessions.php"> Booked Time </a>
+                        <a class="nav-link" href="sessions.php">Booked Time</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php"> Log out </a>
+                        <a class="nav-link" href="logout.php">Log out</a>
                     </li>
                 </ul>
             </nav>

@@ -16,7 +16,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/styleapprove.css">
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/timepicker.css">
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/timepicker.js"></script>
+
     <title>approve schedule</title>
 </head>
 <body>
@@ -30,10 +36,28 @@
                 <div id="rangeset">
 
                     <label for="">FROM</label>
-                    <input type="date" name="from" id="" required>
+                    <input type="date" name="from" id="datepicker" required>
+                    <?php include('../include/datepicker.php');?>
+
 
                     <label for="">TO</label>
-                    <input type="date" name="to" id="" required>
+                    <input type="date" name="to" id="datepicker2" required>
+                    <script type="text/javascript">
+                                
+                            $(document).ready(function(){
+                            
+
+                                    $("#datepicker2").datepicker({
+                                        numberOfMonth:1,
+                                        format: 'yyyy/mm/dd',
+                                        todayHighlight:true,
+                                        autoclose:true,
+
+                                    });
+            
+        })
+                           
+    </script>
 
                     <input type="submit" name="get" value="GET">
                 
@@ -44,9 +68,9 @@
                     <th>No</th>
                     <th>Counsellor</th>
                     <th>Email</th>
-                    <th>Date</th>
-                    <th>From</th>
-                    <th>To</th>
+                    <th> From Date</th>
+                    <th>To Date</th>
+                    <th>To Time</th>
                     <th>Reason</th> 
                     <th>Confirm</th>              
                 </tr>
@@ -85,7 +109,8 @@
                             <td><?php echo $available_date;?></td>
                             <td><?php echo $available_time;?></td>
                             <td><?php echo $reason;?></td>
-                            <td><input type="checkbox" name="checked" id=""></td>
+                            <td>Yes<input type="checkbox" name="checkbox[]" value="Yes" id="">
+                            No<input type="checkbox" name="checkbox[]" value="No" id=""> </td>
                         </tr>
                         <?php
                     }

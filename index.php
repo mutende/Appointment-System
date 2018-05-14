@@ -22,7 +22,7 @@ else{
 	</head>
 <body>
 	<div><?php include("include/head.php");?>
-	<div><?php include("include/navbar.php");?></div>
+	<div><?php include("include/navindex.php");?></div>
 	<div id="homemaindiv"></div>
 	
 	<!--<script src="bootstrap/js/bootstrap.min.js"></script>-->

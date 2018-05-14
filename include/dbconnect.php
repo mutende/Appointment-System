@@ -2,7 +2,7 @@
 
 DEFINE ('host','127.0.0.1');
 DEFINE ('user','root');
-DEFINE ('pass','@elvis$');
+DEFINE ('pass','hackEd56');
 DEFINE ('name', 'appointment_details');
 
 
