@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-#navbars{
+nav{
 
-	margin-top:50px;
-	padding-right:50px;
-	font-family: sans-serif;
+	
 	background:grey;
 	color: white;
-}
-#navbars a{
-
-	color: black;
+	height:50px;
 }
 #checkbox{
 	
@@ -28,61 +22,3 @@
 	font-size: 30px;
 	font-family: sans-serif;
 }
-=======
-
-#navbar{
-	
-	height: 50px;
-	background:#4F4F4F;
-	margin-top: 42px;
-	
-}
- #navul{
-	
-	margin: 0px;
-	padding: 0;
-}
-#navli{
-	list-style: none;
-}
-#checkbox{
-	
-	width: 500px;
-	height: 220px;
-	background: white;
-	font-size: 17;
-	font-family: sans-serif;
-	color: black;
-	padding-left: 10px;
-	padding-right:10px;
-}
-#checkbox h2{
-	margin: 20px 10px 0px 100px;
-	padding-top: 20px;
-	font-size: 30px;
-	font-family: sans-serif;
-}
-
-navli > a:active{
-	
-	color: white;
-}
-
-#navli > a{
-	text-decoration: none;
-	float: right;
-	display:block;
-	padding: 10px 20px 10px;
-	color: #2E8B57;
-	line-height:35px;
-	text-align: center;
-	font-family: cursive;
-	font-size:20px;
-}
-
-
-#navli > a:hover{
-	
-	color: white;
-}
->>>>>>> bf7f366cc74f214b10df6489c3becb4bc9694c0c

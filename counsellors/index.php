@@ -18,8 +18,8 @@ else{
 		<link href="style.css" rel="text/css" type="text/css"/>
 	</head>
 	<body>
-	<?php include("../include/adminhead.php"); ?>
-	<?php include("../include/counsellornavbar.php");?>
+	<?php //include("../include/adminhead.php"); ?>
+	<?php include("../include/counsellorindexnavbar.php");?>
 	<h2>Welcome <?php $counsellor;?></h2>
 		
 	</body>

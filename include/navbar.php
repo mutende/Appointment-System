@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE HTML>
 <HTML>
 <head>
@@ -8,42 +7,28 @@
 
 </head>
 	<body>
-	<div id="navbars">
-            <nav  class="nav justify-content-end" >
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php"> Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="book.php"> Book Appointment </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sessions.php"> Booked Time </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php"> Log out </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-	</body>
-=======
-<!DOCTYPE HTML>
-<HTML>
-<head>
-<link rel="stylesheet" href="css/stylenav.css" type="text/css" media="all">
+    <nav  class="navbar navbar-default sticky-top bg-dark" role="navigation">
+            <div class="container-fluid">
+             <img class="navbar-brand" src="images/logo.jpg" alt="logo" height="45px" width="40px">
+            
+           <div class="navbar-header navbar-right">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="book.php">Book Appointment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sessions.php">Booked Time</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Log out</a>
+                        </li>
+                    </ul>
 
-</head>
-	<body>
-		<div id="navbar">
-			<ul id= "navul">
-				<li id="navli"><a href="logout.php"> Log out </a></li>
-				<li id="navli"><a href="sessions.php"> Booked Time </a></li>
-				<li id="navli"><a href="book.php"> Book Appointment </a></li>
-				<li id="navli"><a href="index.php"> Home </a></li>
-			</ul>
-
-		</div>
+            </div>
+        </nav>
+      
 	</body>
->>>>>>> bf7f366cc74f214b10df6489c3becb4bc9694c0c
 </HTML>

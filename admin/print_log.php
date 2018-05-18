@@ -16,8 +16,8 @@ else{
 <link href="style.css" rel="stylesheet" type="text/css" media="all">
 </head>	
 
-	<?php include("../include/head.php"); ?>
-	<?php include("../include/adminnavbar.php");?>
+	<?php //include("../include/head.php"); ?>
+	<?php include("../include/adminprint_lognavbar.php");?>
 	
 </body>
 </html>
